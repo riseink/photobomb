@@ -15,3 +15,245 @@ Migrating to CreatePhotos (20140311154825)
   [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140311154825')[0m
   [1m[35m (3.1ms)[0m  commit transaction
   [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-03-11 10:56:05 -0500
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (1ms)
+
+
+Started GET "/photo" for 127.0.0.1 at 2014-03-11 10:56:09 -0500
+
+ActionController::RoutingError (No route matches [GET] "/photo"):
+  actionpack (3.2.16) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.16) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.16) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.16) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.16) lib/rails/engine.rb:484:in `call'
+  railties (3.2.16) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.16) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/digitaltraffic/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/digitaltraffic/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/digitaltraffic/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/digitaltraffic/.rvm/gems/ruby-1.9.2-head@photobomb/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.2ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2014-03-11 10:56:17 -0500
+Processing by PhotosController#index as HTML
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" [0m
+  Rendered photos/index.html.erb within layouts/application (0.7ms)
+Warning. Error encountered while saving cache /Users/digitaltraffic/Desktop/photobomb/tmp/cache/sass/2418a04c5ab083b5b92f6f5be666f528d742379e/photos.css.scssc: can't dump anonymous class #<Class:0x00000102594518>
+Compiled photos.css  (5ms)  (pid 1238)
+Warning. Error encountered while saving cache /Users/digitaltraffic/Desktop/photobomb/tmp/cache/sass/2418a04c5ab083b5b92f6f5be666f528d742379e/scaffolds.css.scssc: can't dump anonymous class #<Class:0x00000102594518>
+Compiled scaffolds.css  (9ms)  (pid 1238)
+Compiled application.css  (26ms)  (pid 1238)
+Compiled jquery.js  (1ms)  (pid 1238)
+Compiled jquery_ujs.js  (0ms)  (pid 1238)
+Compiled photos.js  (408ms)  (pid 1238)
+Compiled application.js  (457ms)  (pid 1238)
+Completed 200 OK in 579.3ms (Views: 536.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2014-03-11 10:56:17 -0500
+Served asset /photos.css - 200 OK (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-11 10:56:17 -0500
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-03-11 10:56:17 -0500
+Served asset /photos.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-11 10:56:17 -0500
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-11 10:56:17 -0500
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-11 10:56:17 -0500
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-11 10:56:17 -0500
+Served asset /application.js - 200 OK (26ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2014-03-11 10:56:19 -0500
+Processing by PhotosController#new as HTML
+  Rendered photos/_form.html.erb (4.9ms)
+  Rendered photos/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 17.1ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-03-11 10:57:32 -0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2014-03-11 10:57:36 -0500
+Processing by PhotosController#index as HTML
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" 
+  Rendered photos/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6.8ms (Views: 4.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-11 10:57:36 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2014-03-11 10:57:36 -0500
+Served asset /photos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-11 10:57:36 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-11 10:57:36 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-11 10:57:36 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-03-11 10:57:36 -0500
+Served asset /photos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-11 10:57:36 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2014-03-11 10:57:37 -0500
+Processing by PhotosController#new as HTML
+  Rendered photos/_form.html.erb (2.6ms)
+  Rendered photos/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 11.6ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-11 10:57:37 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2014-03-11 10:57:37 -0500
+Served asset /photos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-11 10:57:37 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-11 10:57:37 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-03-11 10:57:37 -0500
+Served asset /photos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-11 10:57:37 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-11 10:57:37 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2014-03-11 10:57:40 -0500
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"85ucWqJOkiVsO+y8X7zItbfXMKN18SK0rXGe3xWkY3Y=", "photo"=>{"title"=>"", "description"=>"", "price"=>""}, "commit"=>"Create Photo"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.2ms)[0m  INSERT INTO "photos" ("created_at", "description", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 11 Mar 2014 15:57:40 UTC +00:00], ["description", ""], ["price", ""], ["title", ""], ["updated_at", Tue, 11 Mar 2014 15:57:40 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/photos/1
+Completed 302 Found in 11.7ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2014-03-11 10:57:40 -0500
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered photos/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 5.9ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2014-03-11 10:57:40 -0500
+Served asset /photos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-11 10:57:40 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-11 10:57:40 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-11 10:57:40 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-03-11 10:57:40 -0500
+Served asset /photos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-11 10:57:40 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-11 10:57:40 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/photos/1/edit" for 127.0.0.1 at 2014-03-11 10:57:42 -0500
+Processing by PhotosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered photos/_form.html.erb (2.2ms)
+  Rendered photos/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 7.8ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-11 10:57:42 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-11 10:57:42 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2014-03-11 10:57:42 -0500
+Served asset /photos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-11 10:57:42 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-11 10:57:42 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-03-11 10:57:42 -0500
+Served asset /photos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-11 10:57:42 -0500
+Served asset /application.js - 304 Not Modified (0ms)
