@@ -1,29 +1,23 @@
-<h1>Listing photos</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Price</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @photos.each do |photo| %>
-  <tr>
-    <td><%= photo.title %></td>
-    <td><%= photo.description %></td>
-    <td><%= photo.price %></td>
-    <td><%= image_tag(photo.artwork) %></td>
+<div class="gallery group">
+<h1><%= photo.title %></h1>
+<h3><em><%= photo.description %></em></h3>
+<%= image_tag(photo.artwork) %>
+<p><%= "$" + photo.price %></p>
 
-    <td><%= link_to 'Show', photo %></td>
-    <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-    <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="me@mybusiness.com">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="item_name" value="<%= photo.title %>">
+<input type="hidden" name="amount" value="<%= photo.price %>">
+<input type="image" src="http://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+</form>
+
+<%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Edit', edit_photo_path(photo) %>
 <% end %>
-</table>
-
-<br />
+<br>
+<br>
 
 <%= link_to 'New Photo', new_photo_path %>
