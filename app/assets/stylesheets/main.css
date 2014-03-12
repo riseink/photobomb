@@ -21,7 +21,11 @@ h1{
   font-family: "Open Sans Light","helvetica neue",helvetica,arial,sans-serif;
   font-weight: 100;
   font-size: 3.2em;
-  color: #000
+  color: #fff;
+  background: rgba(0,0,0, .75);
+  padding: 10px;
+
+
   
 }
 
@@ -30,5 +34,25 @@ h3{
   font-family: "Open Sans Light","helvetica neue",helvetica,arial,sans-serif;
   font-weight: 400;
   font-size: 1.2em;
-  color: #000
+  color: #000;
+  max-height: 160px;
+  overflow:hidden;
+}
+
+.gallery {
+	width: 500px;
+	margin: 20px;
+	padding: 20px;
+	background: rgba(255, 255, 255, .25);
+	float:left;
+}
+
+.gallery img {
+	width: 500px;
+}
+
+
+.art-container{
+	width: 1200px;
+	margin: auto;
 }

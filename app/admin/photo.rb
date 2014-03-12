@@ -8,6 +8,7 @@ ActiveAdmin.register Photo do
   column :artwork do |photo|
     image_tag(photo.artwork_url, :height => 100) unless photo.artwork_url.blank?
    end
+   default_actions                   
    
  end
   
