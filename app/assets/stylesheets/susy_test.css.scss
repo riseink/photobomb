@@ -1,0 +1,64 @@
+// @import "_normalize.scss"; 
+// To revert all browser default styles 
+
+// @import "susyone"; 
+// susy is now reserved for susy 2. For the rest of this tutorial, you have to use susyone instead of importing "susy" as in previous versions.
+
+
+// Configuring Susy defaults
+// Susy accepts px, em and rem for the magic and fixed grid, and % for the fluid grid
+$total-columns: 10;
+$column-width: 4rem;
+$gutter-width: 1rem;    
+$grid-padding: $gutter-width / 2; 
+
+$container-style: magic; // default to magic. Switch to fluid or fixed if desired
+
+// @include border-box-sizing;
+
+.container {
+  // @include susy-grid-background;
+}
+
+/**
+ * Styles for AG grids & Container
+ */
+
+.container {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.ag1, .ag3 {
+  background-color: rgba(113, 218, 210, 0.7);
+}
+
+.ag2 {
+  background-color: rgba(250, 231, 179, 0.7);
+}
+
+.ag4,.ag5,.ag8,.ag9 {
+  background-color: rgba(238, 158, 156, 0.7);
+}
+
+.ag6 {
+  background-color: rgba(240, 150, 113, 0.7);
+}
+
+.ag7 {
+  background-color: rgba(246, 215, 132, 0.7);
+}
+
+.ag10 {
+  background-color: rgba(234, 159, 195, 0.7);
+}
+
+/**
+ * Text Styles
+ */
+h2 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: normal;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}

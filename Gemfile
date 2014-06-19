@@ -27,6 +27,11 @@ gem 'jquery-ui-rails'
 gem 'carrierwave' 
 gem 'activeadmin'
 
+gem 'susy'
+
+gem "modernizr-rails"
+gem "gumby-framework"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
